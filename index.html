@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Call : sipml5/call.htm" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Call</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/fvrljicak/call">View on GitHub</a>
+
+          <h1 id="project_title">Call</h1>
+          <h2 id="project_tagline">sipml5/call.htm</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/fvrljicak/call/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/fvrljicak/call/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>&lt;!DOCTYPE html&gt;</p>
+
+
+
+<p></p>
+
+
+
+<p></p>
+    sipML5 live demo<pre><code>&lt;!-- SIPML5 API:
+DEBUG VERSION: 'SIPml-api.js'
+RELEASE VERSION: 'release/SIPml-api.js'
+--&gt;
+&lt;script src="SIPml-api.js?svn=224" type="text/javascript"&gt; &lt;/script&gt;
+
+&lt;!-- Styles --&gt;
+&lt;link href="./assets/css/bootstrap.css" rel="stylesheet" /&gt;
+&lt;style type="text/css"&gt;
+    body{
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    .navbar-inner-red {
+      background-color: #600000;
+      background-image: none;
+      background-repeat: no-repeat;
+      filter: none;
+    }
+    .full-screen{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .normal-screen{
+        position: relative;
+    }
+    .call-options {
+      padding: 5px;
+      background-color: #f0f0f0;
+      border: 1px solid #eee;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+      -webkit-transition-property: opacity;
+      -moz-transition-property: opacity; 
+      -o-transition-property: opacity; 
+      -webkit-transition-duration: 2s;
+      -moz-transition-duration: 2s;
+      -o-transition-duration: 2s;
+    }
+    .tab-video,
+    .div-video{
+        width: 100%; 
+        height: 0px; 
+        -webkit-transition-property: height;
+        -moz-transition-property: height;
+        -o-transition-property: height;
+        -webkit-transition-duration: 2s;
+        -moz-transition-duration: 2s;
+        -o-transition-duration: 2s;
+    }
+    .label-align {
+        display: block;
+        padding-left: 15px;
+        text-indent: -15px;
+    }
+    .input-align {
+        width: 13px;
+        height: 13px;
+        padding: 0;
+        margin:0;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+        *overflow: hidden;
+    }
+    .glass-panel{
+        z-index: 99;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        background-color: Gray;
+    }
+    .div-keypad {
+        z-index: 100;
+        position: fixed;
+        -moz-transition-property: left top;
+        -o-transition-property: left top;
+        -webkit-transition-duration: 2s;
+        -moz-transition-duration: 2s;
+        -o-transition-duration: 2s;
+    }
+
+&lt;/style&gt;
+&lt;link href="./assets/css/bootstrap-responsive.css" rel="stylesheet" /&gt;
+&lt;!-- Le fav and touch icons --&gt;
+&lt;link rel="shortcut icon" href="./assets/ico/favicon.ico" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png" /&gt;
+&lt;link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png" /&gt;
+</code></pre>
+
+<p></p>
+
+
+
+<p></p>
+    <div>
+        <div>
+            <div>
+                <a>
+                </a>
+                <img alt="sipML5" src="./images/sipml-34x39.png"><div>
+                    <ul>
+<li><a href="index.html?svn=224">Home</a></li>
+                    </ul>
+</div>
+                &lt;!--/.nav-collapse --&gt;
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <div>
+                
+                
+                <h2>
+<a name="--------------------registration" class="anchor" href="#--------------------registration"><span class="octicon octicon-link"></span></a>
+                    Registration</h2>
+                <br><table>
+<tr>
+<td>
+                            
+                                Display Name:
+                        </td>
+                        <td>
+                            </td>
+                    </tr>
+<tr>
+<td>
+                            
+                                Private Identity<sup><em></em></sup>:
+                        </td>
+                        <td>
+                            </td>
+                    </tr>
+<tr>
+<td>
+                            
+                                Public Identity<sup></sup>:
+                        </td>
+                        <td>
+                            </td>
+                    </tr>
+<tr>
+<td>
+                            Password:
+                        </td>
+                        <td>
+                            </td>
+                    </tr>
+<tr>
+<td>
+                            Realm<sup><em></em></sup>:
+                        </td>
+                        <td>
+                            </td>
+                    </tr>
+<tr>
+<td colspan="2" align="right">
+                            
+                             
+                            </td>
+                    </tr>
+<tr>
+<td colspan="3">
+                            <p><sup></sup><i>Mandatory Field</i></p>
+                        </td>
+                    </tr>
+<tr>
+<td colspan="3">
+                            <a href="http://code.google.com/p/sipml5/wiki/Public_SIP_Servers" target="_blank">Need SIP account?</a>
+                        </td>
+                    </tr>
+<tr>
+<td colspan="3">
+                            <a href="./expert.htm" target="_blank">Expert mode?</a>
+                        </td>
+                    </tr>
+</table>
+</div>
+            <div>
+                
+                
+                <h2>
+<a name="--------------------call-control----------------" class="anchor" href="#--------------------call-control----------------"><span class="octicon octicon-link"></span></a>
+                    Call control
+                </h2>
+                <br><table>
+<tr>
+<td>
+                            <br>
+</td>
+                    </tr>
+<tr>
+<td colspan="1" align="right">
+                            <div>
+                                <div>
+                                    Call
+                                </div>  
+                                <div>
+                                    </div>
+                             </div>
+                        </td>
+                    </tr>
+<tr>
+<td>
+                            <div>
+                                <div>
+                                    </div>
+                                <div>
+                                    </div>
+                            </div>
+                        </td>
+                    </tr>
+<tr>
+<td align="center">
+                            <div>
+                                  
+                                  
+                                  
+                                </div>
+                        </td>
+                    </tr>
+</table>
+</div>
+        </div>
+
+<pre><code>    &lt;br /&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; Doubango Telecom 2012-2013 &lt;br /&gt;
+        &lt;i&gt;Inspiring the future&lt;/i&gt;
+        &lt;/p&gt;
+        &lt;!-- Creates all ATL/COM objects right now 
+            Will open confirmation dialogs if not already done
+        --&gt;
+        &lt;object id="fakeVideoDisplay" classid="clsid:5C2C407B-09D9-449B-BB83-C39B7802A684" style="visibility:hidden;"&gt; &lt;/object&gt;
+        &lt;object id="fakeLooper" classid="clsid:7082C446-54A8-4280-A18D-54143846211A" style="visibility:visible; width:0px; height:0px"&gt; &lt;/object&gt;
+        &lt;object id="fakeSessionDescription" classid="clsid:DBA9F8E2-F9FB-47CF-8797-986A69A1CA9C" style="visibility:hidden;"&gt; &lt;/object&gt;
+        &lt;object id="fakeNetTransport" classid="clsid:5A7D84EC-382C-4844-AB3A-9825DBE30DAE" style="visibility:hidden;"&gt; &lt;/object&gt;
+        &lt;object id="fakePeerConnection" classid="clsid:56D10AD3-8F52-4AA4-854B-41F4D6F9CEA3" style="visibility:hidden;"&gt; &lt;/object&gt;
+        &lt;!-- 
+            NPAPI  browsers: Safari, Opera and Firefox
+        --&gt;
+        &lt;!--embed id="WebRtc4npapi" type="application/w4a" width='1' height='1' style='visibility:hidden;' /--&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+&lt;!-- /container --&gt;
+
+&lt;!-- Glass Panel --&gt;
+&lt;div id='divGlassPanel' class='glass-panel' style='visibility:hidden'&gt;&lt;/div&gt;
+&lt;!-- KeyPad Div --&gt;
+&lt;div id='divKeyPad' class='span2 well div-keypad' style="left:0px; top:0px; width:250; height:240; visibility:hidden"&gt;
+    &lt;table style="width: 100%; height: 100%"&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type="button" style="width: 33%" class="btn" value="1" onclick="sipSendDTMF('1');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="2" onclick="sipSendDTMF('2');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="3" onclick="sipSendDTMF('3');"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type="button" style="width: 33%" class="btn" value="4" onclick="sipSendDTMF('4');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="5" onclick="sipSendDTMF('5');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="6" onclick="sipSendDTMF('6');"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type="button" style="width: 33%" class="btn" value="7" onclick="sipSendDTMF('7');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="8" onclick="sipSendDTMF('8');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="9" onclick="sipSendDTMF('9');"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;&lt;input type="button" style="width: 33%" class="btn" value="*" onclick="sipSendDTMF('*');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="0" onclick="sipSendDTMF('0');"/&gt;&lt;input type="button" style="width: 33%" class="btn" value="#" onclick="sipSendDTMF('#');"/&gt;&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td colspan=3&gt;&lt;input type="button" style="width: 100%" class="btn btn-medium btn-danger" value="close" onclick="closeKeyPad();" /&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+&lt;!-- Call button options --&gt;
+&lt;ul id="ulCallOptions" class="dropdown-menu" style="visibility:hidden"&gt;
+    &lt;li&gt;&lt;a href="#" onclick='sipCall("call-audio");'&gt;Audio&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onclick='sipCall("call-audiovideo");'&gt;Video&lt;/a&gt;&lt;/li&gt;
+    &lt;li id='liScreenShare' &gt;&lt;a href="#" onclick='sipCall("call-screenshare");'&gt;Screen Share&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" onclick='uiDisableCallOptions();'&gt;&lt;b&gt;Disable these options&lt;/b&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Le javascript
+================================================== --&gt;
+&lt;!-- Placed at the end of the document so the pages load faster --&gt;
+&lt;script type="text/javascript" src="./assets/js/jquery.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-transition.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-alert.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-modal.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-dropdown.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-scrollspy.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-tab.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-tooltip.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-popover.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-button.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-collapse.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-carousel.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="./assets/js/bootstrap-typeahead.js"&gt;&lt;/script&gt;
+
+&lt;!-- Audios --&gt;
+&lt;audio id="audio_remote" autoplay="autoplay" /&gt;
+&lt;audio id="ringtone" loop src="sounds/ringtone.wav" /&gt;
+&lt;audio id="ringbacktone" loop src="sounds/ringbacktone.wav" /&gt;
+&lt;audio id="dtmfTone" src="sounds/dtmf.wav" /&gt;
+
+&lt;!-- 
+    Microsoft Internet Explorer extension
+    For now we use msi installer as we don't have trusted certificate yet :(
+--&gt;
+&lt;!--object id="webrtc4ieLooper" classid="clsid:7082C446-54A8-4280-A18D-54143846211A" CODEBASE="http://sipml5.org/deploy/webrtc4all.CAB"&gt; &lt;/object--&gt;
+
+&lt;!-- GOOGLE ANALYTICS --&gt;
+&lt;script type="text/javascript"&gt;
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+    try {
+        var pageTracker = _gat._getTracker("UA-6868621-19");
+        pageTracker._trackPageview();
+    } catch (err) { }
+&lt;/script&gt;
+</code></pre>
+
+<p>
+</p>
+</div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Call maintained by <a href="https://github.com/fvrljicak">fvrljicak</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
